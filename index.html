@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="item" id='div1'></div>
+        <div class="item" id='div2'></div>
+        <div class="item" id='div3'></div>
+        <div class="item" id='div4'></div>
+        <div class="item" id='div5'></div>
+        <div class="item" id='div6'></div>
+        <div class="item" id='div7'></div>
+        <div class="item" id='div8'></div>
+        <div class="item" id='div9'></div>
+        <div class="item" id='div10'></div>
+        <div class="item" id='div11'></div>
+        <div class="item" id='div12'></div>
+        <div class="item" id='div13'></div>
+        <div class="item" id='div14'></div>
+        <div class="item" id='div15'></div>
+        <div class="item" id='div16'></div>
+    </div>
+    <script>
+        let arr1 =["一个细胞里，却分裂出了两种截然不同的命运。","人间忽晚，山河已秋。——亦沫不吃鱼。","失去故土的花朵，回不去，却也离不开。"];
+        let arr2 =["——法医秦明","——亦沫不吃鱼「人间忽晚」","——夏达「长歌行」"];
+        for(var a=1;a<=16;a++){
+            var para = document.createElement("p");
+            var node = document.createTextNode(arr1[(a - 1) % 3]);
+            para.appendChild(node);
+            var element = document.getElementById("div" + a);
+            element.appendChild(para);
+            var para =document.createElement("p");
+            para.setAttribute("id","p1");
+            // document.getElementBy("p")
+            var node2 =document.createTextNode(arr2[(a - 1) % 3]);
+            para.appendChild(node2)
+            element.appendChild(para);
+        }
+    </script>
